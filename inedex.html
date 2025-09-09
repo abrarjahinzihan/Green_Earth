@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 <body class="bg-[#F0FDF4]">
     <nav">
@@ -63,7 +65,7 @@
         <h2 class="text-3xl font-bold text-center">Choose Your Trees</h2>
         <div class="flex flex-col justify-between gap-10 mt-10 lg:flex-row">
                 
-            <div class="w-full p-4 border-2 rounded-lg lg:w-1/5">
+            <div class="w-full p-4 rounded-lg lg:w-1/5">
                 <h4 class="p-2 text-2xl font-bold">Categories</h4>
                 <div id="categories-list" class="flex flex-col gap-2 mt-4 overflow-hidden">
                     <p class="text-white bg-[#15803D]">All Trees</p>
@@ -72,14 +74,14 @@
                 </div>
             </div>
 
-            <div class="w-full p-4 border-2 rounded-lg lg:w-3/5">
+            <div class="w-full p-4 rounded-lg lg:w-3/5">
                 <div id="single-plant-card" class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 
                     <!-- API -->
                 </div>
             </div>
 
-            <div class="w-full p-4 border-2 rounded-lg lg:w-1/5">
+            <div class="w-full p-4 bg-white rounded-lg lg:w-1/5">
                 <h4>Your Cart</h4>
                 <div>
                     <!-- api -->
@@ -120,7 +122,7 @@
     </section>
     
     
-    <section class="max-w-6xl px-4 py-12 mx-auto bg-[#CFF0DC] m-11">
+    <section class="w-[100%] px-4 py-12 mx-auto bg-[#CFF0DC] mt-10">
         <h2 class="mb-16 text-4xl font-bold text-center text-gray-800">Our Impact</h2>
         <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div class="p-8 text-center bg-white impact-card rounded-2xl">
@@ -143,8 +145,46 @@
 
     </section>
 
+    
+    <section class="flex flex-col items-center justify-center p-20 bg-green-800 ">
 
+        <div class="w-full max-w-md p-8 bg-[#15803D] rounded-lg shadow-lg h-[591px]">
+            <h2 class="mb-6 text-2xl font-semibold text-center text-white">
+            Plant a Tree Today
+            </h2>
 
+            <form class="flex flex-col space-y-4">
+            <input 
+                type="text" 
+                placeholder="Your Name" 
+                class="w-full input input-bordered"
+            />
+
+            <input 
+                type="email" 
+                placeholder="Your Email Address" 
+                class="w-full input input-bordered"
+            />
+
+            <select class="w-full select select-bordered">
+                <option disabled selected>Number of Trees</option>
+                <option>1</option>
+                <option>5</option>
+                <option>10</option>
+                <option>20</option>
+            </select>
+
+            <button class="w-full rounded-full btn btn-warning">
+                Donate Now
+            </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="flex justify-center items-center text-sm text-white opacity-80 h-[72px] bg-[#14532D]">
+        <i class="mr-1 fa-regular fa-copyright"></i> 
+        2025 Green Earth. All Rights Reserved.
+    </footer>
 
     <script src="logic.js"></script>
 </body>
