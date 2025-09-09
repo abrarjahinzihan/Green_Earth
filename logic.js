@@ -4,7 +4,6 @@ const cardContainer = document.getElementById("card-container");
 const cartContainer = document.getElementById("cart-container");
 const TotalValue = document.getElementById("total-value");
 
-
 function displayTotal(arr) {
     console.log(arr,13333)
 
@@ -18,6 +17,7 @@ function displayTotal(arr) {
     } else {
         TotalValue.innerText = sumPrice;
     }
+
 }
 
 
@@ -27,7 +27,7 @@ function displayCart(cartsData) {
     for (let cart of cartsData) {
         const div = document.createElement("div");
         div.innerHTML = `
-                <div class="card   bg-[#F0FDF4] m-2 shadow-lg ">
+                <div class="card   shadow-sm  bg-[#F0FDF4] m-2 ">
                 <div class="card-body">
                     <div class=" ">
                         <div class="flex justify-between items-center gap-1">
@@ -37,7 +37,7 @@ function displayCart(cartsData) {
                                 </p>
                             </div>
 
-                            <button class="btn btn-sm  hover:bg-red-600 hover:text-white" onclick="disCart('${cart.name}', ${cart.singlePrice}, -1, ${cart.singlePrice})"
+                            <button class="btn btn-sm  hover:bg-green-900 hover:text-white" onclick="disCart('${cart.name}', ${cart.singlePrice}, -1, ${cart.singlePrice})"
     >
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor">
@@ -52,31 +52,31 @@ function displayCart(cartsData) {
                 </div>
             </div>`;
         cartContainer.appendChild(div);
+
         displayTotal(cartsData);
     }
 }
-
 function cartCalculation(arr) {
     let map = {};
 
     console.log(arr);
 
     for (let item of arr) {
-        let k = (item.name || " ").trim();
-        if (!map[k]) {
-        map[k] = {
-            name: k,
+        let key = (item.name || " ").trim();
+        if (!map[key]) {
+        map[key] = {
+            name: key,
             quantity: 0,
             price: 0,
             singlePrice: item.singlePrice,
         };
         }
 
-        map[k].quantity += Number(item.quantity) || 0;
-        map[k].price += Number(item.price) || 0;
+        map[key].quantity += Number(item.quantity) || 0;
+        map[key].price += Number(item.price) || 0;
     }
 
-    console.log(map, 11111111);    //grouped map object
+    console.log(map, 11111111);
     let result = [];
     for (let k in map) {
         if (Object.prototype.hasOwnProperty.call(map, k)) {
@@ -86,32 +86,33 @@ function cartCalculation(arr) {
         }
     }
 
-    console.log(result, 111122); //final cart result array
+    console.log(result, 111122);
 
     displayCart(result);
     displayTotal(result)
 }
 
-function updateCart(name, amount, tPrice) {
+function updateCart(name, quantity, singlePrice) {
     let data = {
         name: name,
-        price: tPrice * amount,
-        amount: amount,
-        tPrice: tPrice,
+        price: singlePrice * quantity,
+        quantity: quantity,
+        singlePrice: singlePrice,
     };
 
     cartData.push(data);
     cartCalculation(cartData);
 }
 
-function disCart(name, price, amount, tPrice) {
-    updateCart(name, amount, tPrice);
+function disCart(name, price, quantity, singlePrice) {
+    updateCart(name, quantity, singlePrice);  
 }
 
 
-function cartFunction(name, price, amount, tPrice) {
+
+function cartFunction(name, price, quantity, singlePrice) {
     alert(`${name} has been added to the cart`)
-    updateCart(name, amount, tPrice);
+    updateCart(name, quantity, singlePrice);
 }
 
 
@@ -131,6 +132,7 @@ function manageLoading(status) {
         cardContainer.classList.remove("hidden");
     }
 }
+
 
 
 const displayModalDes = (detail) => {
@@ -164,7 +166,6 @@ const displayModalDes = (detail) => {
 
 const loadModalDes = (id) => {
     url = `https://openapi.programming-hero.com/api/plant/${id}`;
-
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
@@ -173,10 +174,11 @@ const loadModalDes = (id) => {
 };
 
 
-const displayByCategories = (plants) => {
+const displayPlantsByCategories = (plants) => {
     console.log(plants);
     manageLoading(true);
     cardContainer.innerHTML = "";
+
     for (let plant of plants) {
         const div = document.createElement("div");
         div.classList.add("h-full", "w-full");
@@ -216,7 +218,6 @@ const displayByCategories = (plants) => {
         </div>
     </div>
     `;
-
         cardContainer.appendChild(div);
     }
     manageLoading(false);
@@ -230,9 +231,8 @@ const loadPlantsByCategories = (id) => {
         .then((json) => {
         removeActive();
         const clickBtn = document.getElementById(`tree-btn${id}`);
-
         clickBtn.classList.add("active");
-        displayByCategories(json.plants);
+        displayPlantsByCategories(json.plants);
         });
 };
 
@@ -246,10 +246,10 @@ const allLoadCategories = () => {
         removeActive();
         const clickBtnAll = document.getElementById("tree-btn");
         clickBtnAll.classList.add("active");
-
-        displayByCategories(json.plants);
+        displayPlantsByCategories(json.plants);
         });
 };
+
 
 
 const displayCategories = (btns) => {
@@ -273,9 +273,8 @@ const loadCategories = () => {
         .then((res) => res.json())
         .then((json) => {
         allLoadCategories();
-
         displayCategories(json.categories);
         });
-};
+    };
 
 loadCategories();
