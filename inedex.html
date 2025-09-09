@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#F0FDF4]">
     <nav">
         <div class="navbar bg-[#15803D] shadow-sm">
             <div class="navbar-start">
@@ -40,7 +40,7 @@
         </div>
     </nav>
 
-    <section class="flex flex-col md:flex-row bg-[#CFF0DC] shadow-xl overflow-hidden h-auto md:h-[383px]">
+    <section class="flex flex-col md:flex-row bg-[#CFF0DC] shadow-xl overflow-hidden h-auto md:h-[383px] p-40 ">
         <div class="w-full md:w-1/4 flex items-center justify-center min-h-[300px] md:h-[383px]">
             <img src="assets/hero-leaf1.png" alt="" srcset="">
         </div>
@@ -59,11 +59,7 @@
             <img src="assets/hero-leaf2.png" alt="" srcset="">
         </div>
     </section>
-
-
-
-
-    <section id="tree-selection" class="px-4 my-20 lg:px-25">
+    <section id="tree-selection" class="items-center justify-center px-20 my-20 lg:px-25">
         <h2 class="text-3xl font-bold text-center">Choose Your Trees</h2>
         <div class="flex flex-col justify-between gap-10 mt-10 lg:flex-row">
                 
@@ -91,6 +87,38 @@
             </div>
         </div>
     </section>
+
+        <section class="items-center justify-center overflow-hidden shadow-lg rounded-2xl ">
+            <h2 class="mb-6 text-3xl font-bold text-center text-green-700">About the Campaign</h2>
+            <div class="flex flex-col items-center justify-center md:flex-row">
+                
+                <div class="w-full md:w-1/2">
+                    <img src="assets/about.png" 
+                        alt="" class="object-cover ">
+                </div>
+                
+
+                <div class="items-center justify-between p-20 shadow-lg md:w-1/2 md:p-12 rounded-xl">
+                    
+                    <p class="mb-6 text-gray-700">
+                        Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+                    </p>
+                    <ul class="list-disc list-inside">
+                        <li>
+                            Restoration of natural habitats
+                        </li>
+                        <li>
+                            Improvement of air quality
+                        </li>
+                        <li>
+                            Support for local communities
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </section>
+
 
 
 

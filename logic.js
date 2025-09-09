@@ -56,6 +56,16 @@ showAllPlants = (data) => {
         </div>
         `;
     });
-    };
+};
+
+
+
 
 loadAllPlants();
+
+
+
+
+
+
+
