@@ -14,20 +14,20 @@
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
                     <ul
                         tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        class="p-2 mt-3 shadow menu menu-sm dropdown-content bg-base-100 rounded-box z-1 w-52">
                         <li><a>About</a></li>
                         <li><a>Gallery</a></li>
                         <li><a>Plant a Tree</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl text-white">Green Earth</a>
+                <a class="text-xl text-white btn btn-ghost">Green Earth</a>
             </div>
-            <div class="navbar-center hidden lg:flex text-white">
-                <ul class="menu menu-horizontal px-1">
+            <div class="hidden text-white navbar-center lg:flex">
+                <ul class="px-1 menu menu-horizontal">
                     <li><a>About</a></li>
                     <li><a>Gallery</a></li>
                     <li><a>Plant a Tree</a></li>
@@ -44,7 +44,7 @@
         <div class="w-full md:w-1/4 flex items-center justify-center min-h-[300px] md:h-[383px]">
             <img src="assets/hero-leaf1.png" alt="" srcset="">
         </div>
-        <div class="w-full md:w-2/4 flex flex-col items-center justify-center text-center p-8 md:p-12">
+        <div class="flex flex-col items-center justify-center w-full p-8 text-center md:w-2/4 md:p-12">
             <h1 class="title-font text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2937] mb-4 md:mb-6">
                 Plant a Tree, Grow a Future
             </h1>
@@ -59,7 +59,56 @@
             <img src="assets/hero-leaf2.png" alt="" srcset="">
         </div>
     </section>
-        
+
+    <section id="hero-section">
+        <div
+            class="flex flex-col lg:flex-row items-center justify-center gap-10 bg-[#CFF0DC] pt-16 lg:pt-24 px-4 lg:px-0">
+            <div>
+                <img src="assets/hero-leaf1.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-bold">Plant a Tree, Grow a Future</h1>
+                <p class="py-6 text-[#00000080]">
+                    Join our mission to plant 1 million trees and make the Earth greener for
+                    future<br>generations.
+                </p>
+                <button class="btn bg-[#FACC15] rounded-full text-[#15803D] border-none">Get Involved</button>
+            </div>
+            <div>
+                <img src="assets/hero-leaf2.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="tree-selection" class="px-4 my-20 lg:px-25">
+        <h2 class="text-3xl font-bold text-center">Choose Your Trees</h2>
+        <div class="flex flex-col justify-between gap-10 mt-10 lg:flex-row">
+                
+            <div class="w-full p-4 border-2 rounded-lg lg:w-1/5">
+                <h4 class="p-2 text-2xl font-bold">Categories</h4>
+                <div id="categories-list" class="flex flex-col gap-2 mt-4 overflow-hidden">
+                    <p class="text-white bg-[#15803D]">All Trees</p>
+                        <!-- API call -->
+
+                </div>
+            </div>
+
+            <div class="w-full p-4 border-2 rounded-lg lg:w-3/5">
+                <div id="single-plant-card" class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+
+                    <!-- API -->
+                </div>
+            </div>
+
+            <div class="w-full p-4 border-2 rounded-lg lg:w-1/5">
+                <h4>Your Cart</h4>
+                <div>
+                    <!-- api -->
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
