@@ -40,23 +40,23 @@
         </div>
     </nav>
 
-    <section class="flex flex-col md:flex-row bg-[#CFF0DC] shadow-xl overflow-hidden h-auto md:h-[383px] p-40 ">
-        <div class="w-full md:w-1/4 flex items-center justify-center min-h-[300px] md:h-[383px]">
-            <img src="assets/hero-leaf1.png" alt="" srcset="">
-        </div>
-        <div class="flex flex-col items-center justify-center w-full p-8 text-center md:w-2/4 md:p-12">
-            <h1 class="title-font text-3xl md:text-4xl lg:text-5xl font-bold text-[#1F2937] mb-4 md:mb-6">
-                Plant a Tree, Grow a Future
-            </h1>
-            <p class="text-lg md:text-xl text-[#1F2937] mb-6 md:mb-8 max-w-md">
-                Join our mission to plant 1 million trees and make the Earth greener for future generations.
-            </p>
-            <button class="bg-[#FACC15] hover:bg-blue-600 text-green-500 font-bold py-3 px-8 rounded-full shadow-md transition-all duration-300 transform hover:scale-105 flex items-center">
-                Get Involved
-            </button>
-        </div>
-        <div class="w-full md:w-1/4 flex items-center justify-center min-h-[300px] md:h-[383px]">
-            <img src="assets/hero-leaf2.png" alt="" srcset="">
+    <section id="hero-section">
+        <div
+            class="flex flex-col lg:flex-row items-center justify-center gap-10 bg-[#CFF0DC] pt-16 lg:pt-24 px-4 lg:px-0">
+            <div>
+                <img src="assets/hero-leaf1.png" alt="">
+            </div>
+            <div class="text-center">
+                <h1 class="text-5xl font-bold">Plant a Tree, Grow a Future</h1>
+                <p class="py-6 text-[#00000080]">
+                    Join our mission to plant 1 million trees and make the Earth greener for
+                    future<br>generations.
+                </p>
+                <button class="btn bg-[#FACC15] rounded-full text-[#15803D] border-none">Get Involved</button>
+            </div>
+            <div>
+                <img src="assets/hero-leaf2.png" alt="">
+            </div>
         </div>
     </section>
     <section id="tree-selection" class="items-center justify-center px-20 my-20 lg:px-25">
@@ -88,36 +88,60 @@
         </div>
     </section>
 
-        <section class="items-center justify-center overflow-hidden shadow-lg rounded-2xl ">
-            <h2 class="mb-6 text-3xl font-bold text-center text-green-700">About the Campaign</h2>
-            <div class="flex flex-col items-center justify-center md:flex-row">
+    <section class="max-w-6xl px-4 py-12 mx-auto m-11">
+        <h2 class="mb-6 text-3xl font-bold text-center text-black">About the Campaign</h2>
+        <div class="flex flex-col items-center justify-center md:flex-row">
                 
-                <div class="w-full md:w-1/2">
-                    <img src="assets/about.png" 
-                        alt="" class="object-cover ">
-                </div>
+            <div class="w-full md:w-1/2">
+                <img src="assets/about.png" 
+                    alt="" class="object-cover ">
+            </div>
                 
 
-                <div class="items-center justify-between p-20 shadow-lg md:w-1/2 md:p-12 rounded-xl">
+            <div class="items-center justify-between p-20 shadow-lg md:w-1/2 md:p-12 rounded-xl">
                     
-                    <p class="mb-6 text-gray-700">
-                        Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
-                    </p>
-                    <ul class="list-disc list-inside">
-                        <li>
-                            Restoration of natural habitats
-                        </li>
-                        <li>
-                            Improvement of air quality
-                        </li>
-                        <li>
-                            Support for local communities
-                        </li>
-                    </ul>
+                <p class="mb-6 text-gray-700">
+                    Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+                </p>
+                <ul class="list-disc list-inside">
+                    <li>
+                        Restoration of natural habitats
+                    </li>
+                    <li>
+                        Improvement of air quality
+                    </li>
+                    <li>
+                        Support for local communities
+                    </li>
+                </ul>
                     
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    
+    <section class="max-w-6xl px-4 py-12 mx-auto bg-[#CFF0DC] m-11">
+        <h2 class="mb-16 text-4xl font-bold text-center text-gray-800">Our Impact</h2>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="p-8 text-center bg-white impact-card rounded-2xl">
+                <div class="mb-2 text-5xl font-bold text-green-700">500K+</div>
+                <div class="text-xl font-semibold text-gray-500">Trees Planted</div>
+            </div>
+            
+
+            <div class="p-8 text-center bg-white shadow-lg impact-card rounded-2xl">
+                <div class="mb-2 text-5xl font-bold text-green-700">120+</div>
+                <div class="text-xl font-semibold text-gray-500">Communities Involved</div>
+            </div>
+            
+            <div class="p-8 text-center bg-white shadow-lg impact-card rounded-2xl">
+                <div class="mb-2 text-5xl font-bold text-green-700">30+</div>
+                <div class="text-xl font-semibold text-gray-500">Countries Reached</div>
+            </div>
+        </div>
+        
+
+    </section>
 
 
 
